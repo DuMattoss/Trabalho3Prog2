@@ -13,13 +13,12 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("telaCadastro"), 640, 480); // carrega sua tela principal
+        scene = new Scene(loadFXML("telaCadastro"), 640, 480); 
         stage.setScene(scene);
         stage.setTitle("Cadastro de Clientes");
         stage.show();
     }
 
-    // Esse método é chamado pelos controladores
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }

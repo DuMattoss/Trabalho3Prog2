@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cadastrocliente.TelaControlador">
+   <children>
+      <Label layoutX="195.0" layoutY="14.0" text="Cadastro do Cliente">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="105.0" layoutY="55.0" text="Nome" />
+      <Label layoutX="105.0" layoutY="90.0" text="CEP" />
+      <Label layoutX="106.0" layoutY="123.0" text="Rua" />
+      <Label layoutX="97.0" layoutY="154.0" text="Cidade" />
+      <Label layoutX="99.0" layoutY="191.0" text="Telefone" />
+      <Label layoutX="383.0" layoutY="123.0" text="Número" />
+      <Label layoutX="383.0" layoutY="162.0" text="Estado" />
+      <Button layoutX="325.0" layoutY="86.0" mnemonicParsing="false" onAction="#buscarCEP" text="Buscar" />
+      <Button layoutX="202.0" layoutY="234.0" mnemonicParsing="false" onAction="#limparCampos" text="Limpar" />
+      <Button layoutX="376.0" layoutY="234.0" mnemonicParsing="false" onAction="#cadastrarCliente" text="Gravar" />
+      <TextField fx:id="campoNome" layoutX="150.0" layoutY="51.0" prefHeight="25.0" prefWidth="322.0" />
+      <TextField fx:id="campoCep" layoutX="151.0" layoutY="86.0" promptText="99999-999" />
+      <TextField fx:id="campoRua" layoutX="150.0" layoutY="119.0" />
+      <TextField fx:id="campoCidade" layoutX="150.0" layoutY="150.0" />
+      <TextField fx:id="campoTelefone" layoutX="152.0" layoutY="188.0" promptText="(99)999999999" />
+      <TextField fx:id="campoNumero" layoutX="429.0" layoutY="119.0" prefHeight="25.0" prefWidth="53.0" />
+      <TextField fx:id="campoEstado" layoutX="429.0" layoutY="158.0" prefHeight="25.0" prefWidth="53.0" />
+      <TableView fx:id="tabelaClientes" layoutX="14.0" layoutY="267.0" prefHeight="117.0" prefWidth="574.0">
+        <columns>
+          <TableColumn fx:id="colunaCodigo" prefWidth="52.0" text="Código" />
+          <TableColumn fx:id="colunaNome" prefWidth="209.0" text="Nome" />
+            <TableColumn fx:id="colunaCidade" prefWidth="105.0" text="Cidade" />
+            <TableColumn fx:id="colunaEstado" prefWidth="55.0" text="Estado" />
+            <TableColumn fx:id="colunaTelefone" prefWidth="152.0" text="Telefone" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
